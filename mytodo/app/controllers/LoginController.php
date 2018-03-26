@@ -49,7 +49,7 @@ function login_validate()
         } else {
 
         		$email = $this->input->post('email');
-        		$password = $this->input->post('password');
+        		$password = md5($this->input->post('password'));
         		
         	$this->load->model('user');
 
